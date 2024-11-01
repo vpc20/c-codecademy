@@ -54,7 +54,7 @@ int main()
     printf("You sold %d books and your take home was $%.2f\n", booksSold, totalSalesValue);
     printf("\n");
 
-    // modulo operator
+    // Modulo operator
     int endingDayOfWeek = 0;
     int daysThatPass = 10;
     int daysInWeek = 7;
