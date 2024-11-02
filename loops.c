@@ -21,7 +21,7 @@ int main() {
   //     printf("You now have access.\n");
   //   }
 
-  //-------------------
+  //-----------------------------------------------------------
   //   int guess;
   //   int tries = 0;
 
@@ -39,7 +39,7 @@ int main() {
   //     printf("You got it!\n");
   //   }
 
-  //-------------------
+  //-----------------------------------------------------------
   //   int i = 0;
   //   int square = 0;
 
@@ -54,15 +54,36 @@ int main() {
   //     i--;
   //   }
 
+  //-----------------------------------------------------------
+  // int i = 0;
+
+  // while (i < 10) {
+  //   printf("%d\n", i);
+  //   i++;
+  // }
+  // // converted to do-while loop
+  // do {
+  //   printf("%d\n", i);
+  //   i++;
+  // } while (i < 9);
+
+  // int i = 99;
+
+  //-----------------------------------------------------------
+  // for loops
+
+  // for (int i = 99; i > 0; i--) {
+  //   printf("%d bottles of pop on the wall.\n", i);
+  //   printf("Take one down and pass it around.\n");
+  //   printf("%d bottles of pop on the wall.\n", i - 1);
+  // }
+
   int i = 0;
 
-  while (i < 10) {
+  // skip printing of number 5
+  for (int i = 0; i < 10; i++) {
+    if (i == 5) continue; // break statement will exit loop
     printf("%d\n", i);
-    i++;
   }
-  // converted to do-while loop
-  do {
-    printf("%d\n", i);
-    i++;
-  } while (i < 9);
+
 }
