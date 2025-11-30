@@ -12,6 +12,7 @@ char randomLowercase() {
     return 'a' + (rand() % 26);
     // return (char)(97 + (rand() % 26));
 }
+
 // Function to generate a random uppercase letter (A-Z)
 char randomUppercase() {
     return 'A' + (rand() % 26);
@@ -31,6 +32,20 @@ char randomPrintable() {
 char randomAlphanumeric() {
     const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     return charset[rand() % 62];
+}
+
+char *randomStringLower(int maxlen) {
+    char *random_str = (char *) malloc(maxlen + 1);
+    int i;
+    int random_len = rand() % (maxlen + 1);
+    printf("%d\n", random_len);
+    for (i = 0; i < random_len; ++i) {
+        random_str[i] = randomLowercase();
+    }
+    if (i == 0) // do not return null string
+        random_str[i] = randomLowercase();
+    random_str[++i] = '\0'; // null terminator for string
+    return random_str;
 }
 
 void main() {
@@ -75,4 +90,6 @@ void main() {
         printf("%c ", randomPrintable());
     }
     printf("\n");
+
+    printf("%s", randomStringLower(10));
 }
