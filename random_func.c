@@ -35,16 +35,20 @@ char randomAlphanumeric() {
 }
 
 char *randomStringLower(int maxlen) {
-    char *random_str = (char *) malloc(maxlen + 1);
     int i;
-    int random_len = rand() % (maxlen + 1);
+    int random_len = 0;
+
+    while (random_len == 0) {
+        random_len = rand() % (maxlen + 1);
+    }
     printf("%d\n", random_len);
+
+    char *random_str = (char *) malloc(maxlen + 1);
     for (i = 0; i < random_len; ++i) {
         random_str[i] = randomLowercase();
     }
-    if (i == 0) // do not return null string
-        random_str[i] = randomLowercase();
     random_str[++i] = '\0'; // null terminator for string
+
     return random_str;
 }
 
